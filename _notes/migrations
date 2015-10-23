@@ -1,0 +1,14 @@
+make new migration file
+
+
+//make new migration file
+//command	|	make new migration |migration file name	| for this new table
+php artisan make:migration create_articles_table --create="articles"
+
+Run the migrations so a new table is created
+php artisan migrate
+
+
+
+//connection login
+in .env

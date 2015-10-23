@@ -1,0 +1,37 @@
+
+
+//model/view/controller setup:
+*see the _notes/migrations file
+
+
+//1. add route for articles:
+Route::get('articles','ArticlesController@index');
+
+//2. make the controller:
+
+php artisan make:controller ArticlesController --plain
+
+//And inside the controller:
+
+public function index(){
+//get all articles inside $article
+$articles = Article::all();
+
+// return the default articles view with the articles
+return view('articles.index', compact('articles'));
+}
+3. Now make the view you have specified
+resources/views/articles/index.blade.php
+
+
+//to get one article with given id:
+// In ArticlesController:
+    public function show($id){
+    	//return $id;
+    	$article = Article::find($id);
+    	return $article->title;
+    }
+
+//In routes.php
+//whener the articles url with /InsertIdHere is //requested get this article  from the show method //from the ArticlesController
+Route::get('articles/{id}','ArticlesController@show');

@@ -1,0 +1,9 @@
+Laravel 5.1
+//Routes
+app/http/routes.php
+
+//Views
+resources/views filename.blade/filename.php
+
+//Controllers
+app/http/controllers

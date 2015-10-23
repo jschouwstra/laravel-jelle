@@ -1,0 +1,9 @@
+//new controller
+php artisan make:controller this_new_controller
+//plain version:
+php artisan make:controller this_new_controller --plain
+
+
+
+//new model
+php artisan make:model this_new_model

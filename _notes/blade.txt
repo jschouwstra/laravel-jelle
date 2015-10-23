@@ -1,0 +1,24 @@
+Locations:
+
+
+
+New controller command:
+php artisan make:controller ThisNewController
+
+Call the method 'ThisMethod' from controller
+Route::get('ThisMethod','ThisNewController@ThisMethod')
+
+passing variables in blade:
+	escaped {{ $name }}
+	un-escaped {!! $name !!}
+
+
+compact():
+
+public function about(){
+	$first = 'Fox';
+	$lasy = 'Mulder';
+	return view('pages.about',compact('first','last'));
+}
+
+

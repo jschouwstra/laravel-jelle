@@ -1,0 +1,14 @@
+//cli:
+composer require illuminate/html
+
+//Go to config/app
+
+//and add         
+
+Illuminate\Html\HtmlServiceProvider::class,
+//into the providers array
+
+
+//into the aliases add
+'Form'      => Illuminate\Html\FormFacade::class,
+'Html'      => Illuminate\Html\HtmlFacade::class,
