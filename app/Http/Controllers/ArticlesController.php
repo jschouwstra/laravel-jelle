@@ -44,4 +44,4 @@ class ArticlesController extends Controller
 
         return $input;
     }
-}
+
