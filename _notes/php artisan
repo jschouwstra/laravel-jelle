@@ -7,3 +7,46 @@ php artisan make:controller this_new_controller --plain
 
 //new model
 php artisan make:model this_new_model
+
+//**********************************************
+//tinker									//**						
+//**********************************************
+//eloquent model
+app/ThisModel
+
+//start tinker
+php artisan tinker
+
+
+//start of object app\article
+				appname\object
+$article = new app\article
+
+//show contents
+$article
+
+//show title property of object article and  set it
+$article->title = 'TitleOfThisArticle'
+
+
+//save every change of $article, if there is no id save a new one
+// if there is a id given, update that one
+$article->save()
+
+
+
+
+
+//get one article object with ID 1
+$article = app\article::find(1)
+
+//then do this to update:
+//To set the title
+$article->title = 'updated'
+//and to save it with the current title 'updated'
+$article->save()
+
+//select from
+$article = app\article::where('id', '1')->get();
+
+
