@@ -45,7 +45,9 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
-    public function store(){
+
+    //Add a request class with rules for validation
+    public function store(Requests\CreateArticleRequest $request){
         // $input = Request::all();
         // $input['published_at'] = Carbon::now();
         // Article::create($input);
